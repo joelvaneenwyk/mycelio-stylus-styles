@@ -1,11 +1,11 @@
 import esc from "escape-string-regexp";
 import fetchCss from "fetch-css";
 import remapCss from "remap-css";
-import {readFileSync} from "node:fs";
-import {resolve, basename, dirname} from "node:path";
+import { readFileSync } from "node:fs";
+import { resolve, basename, dirname } from "node:path";
 import cssnano from "cssnano";
-import {fileURLToPath} from "node:url";
-import {writeFile, exit, glob} from "./utils.js";
+import { fileURLToPath } from "node:url";
+import { writeFile, exit, glob } from "./utils.js";
 import mappingsFn from "../src/gen/mappings.js";
 import ignoresFn from "../src/gen/ignores.js";
 import sourcesFn from "../src/gen/sources.js";
@@ -22,7 +22,7 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   return 0;
 }).filter(file => basename(file) !== "template.css");
 
-const minify = async css => (await cssnano().process(css, {from: undefined})).css;
+const minify = async css => (await cssnano().process(css, { from: undefined })).css;
 
 function replaceCSSMatches(css) {
   return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/g, (_, matches, selector, separator) => {
@@ -51,7 +51,7 @@ function extractThemeName(css) {
 }
 
 async function getThemes() {
-  const themes = {codemirror: [], github: [], jupyter: []};
+  const themes = { codemirror: [], github: [], jupyter: [] };
 
   for (const path of glob("src/themes/codemirror/*.css").sort(sortThemes)) {
     themes.codemirror[basename(path)] = await minify(readFileSync(path, "utf8"));
@@ -84,7 +84,7 @@ async function main() {
     validate: true,
   };
 
-  const {version} = JSON.parse(readFileSync(resolve(__dirname, "../package.json"), "utf8"));
+  const { version } = JSON.parse(readFileSync(resolve(__dirname, "../package.json"), "utf8"));
 
   let css = readFileSync(resolve(__dirname, "../src/template.css"), "utf8");
   css = `${css.trim().replace("{{version}}", version)}\n`;
@@ -99,7 +99,15 @@ async function main() {
   }
 
   const sections = await Promise.all(sources.map(async source => {
-    return remapCss(await fetchCss([source]), mappings, remapOpts);
+    let css = null;
+    let result = null;
+    try {
+      css = await fetchCss([source]);
+      result = remapCss(css, mappings, remapOpts);
+    } catch (error) {
+      console.log(`Failed to fetch CSS from source: '${source.file}'`);
+    }
+    return result ?? new Promise(() => '');
   }));
 
   for (const sourceFile of sourceFiles) {
