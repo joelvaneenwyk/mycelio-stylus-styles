@@ -1,6 +1,7 @@
 {
   "version": "^5.5.88",
   "type": "module",
+  "packageManager": "yarn@4.2.2+sha512.c44e283c54e02de9d1da8687025b030078c1b9648d2895a65aab8e64225bfb7becba87e1809fc0b4b6778bbd47a1e2ab6ac647de4c5e383a53a7c17db6c3ff4b",
   "scripts": {
     "build": "yarn node ./tools/build.js",
     "clean": "yarn node ./tools/clean.js",
@@ -9,7 +10,7 @@
   "devDependencies": {
     "cssnano": "^7.0.1",
     "escape-string-regexp": "^5.0.0",
-    "eslint": "^9.3.0",
+    "eslint": "^8",
     "eslint-config-silverwind": "^85.1.3",
     "fast-glob": "^3.3.2",
     "fetch-css": "^4.1.2",
@@ -22,14 +23,8 @@
     "remap-css": "^7.0.5",
     "stylelint": "^16.5.0",
     "stylelint-config-silverwind": "^24.0.2",
+    "typescript": "^5.4.5",
     "updates": "^16.1.1",
     "versions": "^12.0.2"
-  },
-  "peerDependencies": {
-    "eslint": "*"
-  },
-  "packageManager": "yarn@4.2.2+sha512.c44e283c54e02de9d1da8687025b030078c1b9648d2895a65aab8e64225bfb7becba87e1809fc0b4b6778bbd47a1e2ab6ac647de4c5e383a53a7c17db6c3ff4b",
-  "dependencies": {
-    "typescript": "^5.4.5"
   }
 }
