@@ -15,5 +15,8 @@ jobs:
         with:
           node-version: 20
       - uses: xt0rted/stylelint-problem-matcher@v1
+      - run: sudo npm install -g corepack
+      - run: sudo corepack enable
+      - run: yarn install
       - run: make deps
       - run: make test
