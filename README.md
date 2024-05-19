@@ -1,3 +1,7 @@
+<!-- markdownlint-disable MD033 -->
+
+# Dark Style `mycelio`
+
 <p align="center">
   <img alt="githubdark-logo" src="https://cdn.jsdelivr.net/gh/StylishThemes/logos@master/github.dark/githubdark-mini.svg" width="580">
   <br>
@@ -20,17 +24,17 @@
 <h2 align="center">Your eyes will&nbsp;:heart:&nbsp;you.</h2>
 
 # TOC
-  * [Preview](#preview)
-  * [Installation](#installation)
-    * [Additional Userstyles](#additional-userstyles)
-    * [Supported GitHub Extensions](#supported-github-extensions)
-    * [Available Syntax Highlighting Themes](#available-syntax-highlighting-themes-demo)
-  * [Contributions and Development](#contributions-and-development)
-    * [Auto generated CSS](#auto-generated-css)
-    * [Manual override entries](#manual-override-entries)
-    * [Make targets](#make-targets)
-  * [Notes](#notes)
 
+- [Preview](#preview)
+- [Installation](#installation)
+  - [Additional Userstyles](#additional-userstyles)
+  - [Supported GitHub Extensions](#supported-github-extensions)
+  - [Available Syntax Highlighting Themes](#available-syntax-highlighting-themes-demo)
+- [Contributions and Development](#contributions-and-development)
+  - [Auto generated CSS](#auto-generated-css)
+  - [Manual override entries](#manual-override-entries)
+  - [Make targets](#make-targets)
+- [Notes](#notes)
 
 ## Preview
 
@@ -39,12 +43,12 @@
 ## Installation
 
 1. Install [Stylus for Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) or [Cascadea for Safari](https://cascadea.app/).
-2. Install [github-dark.user.css](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css).
+2. Install [github-dark.user.css](https://raw.githubusercontent.com/joelvaneenwyk/mycelio-stylus-styles/develop/github-dark.user.css).
 3. Set GitHub itself to [dark mode](https://github.com/settings/appearance).
 
 ## Additional Userstyles
 
-⚙️ [GitHub Custom Fonts](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css)<br>
+⚙️ [GitHub Custom Fonts](https://raw.githubusercontent.com/joelvaneenwyk/mycelio-stylus-styles/develop/github-custom-fonts.user.css)<br>
 ⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
 ⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
 ⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
@@ -123,8 +127,8 @@ If you would like to contribute to this repository, please...
 1. [![fork](https://user-images.githubusercontent.com/136959/42383736-c4cb0db8-80fd-11e8-91ca-12bae108bccc.png) Fork](https://github.com/StylishThemes/GitHub-Dark/fork)
 2. Make sure you have these installed:
 
-- [`node`](https://nodejs.org): version 14 or greater with npm
-- `make`: available with UNIX-like OS, on Windows you can use [this](https://stackoverflow.com/a/54086635/808699)
+    - [`node`](https://nodejs.org): version 14 or greater with npm
+    - `make`: available with UNIX-like OS, on Windows you can use [this](https://stackoverflow.com/a/54086635/808699)
 
 3. run `make build install` to rebuild the style and install in the default browser.
 
