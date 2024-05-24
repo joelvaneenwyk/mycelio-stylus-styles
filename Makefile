@@ -1,5 +1,8 @@
-node_modules: package-lock.json
-	npm install --no-save
+package_manager := yarn
+lock_file := yarn.lock
+
+node_modules: $(lock_file)
+	$(package_manager) install --no-save
 	@touch node_modules
 
 .PHONY: test
@@ -37,21 +40,21 @@ install: node_modules
 .PHONY: update
 update: node_modules
 	npx updates -cu
-	rm package-lock.json
-	npm install
+	rm $(lock_file)
+	$(package_manager) install
 	@touch node_modules
 
 .PHONY: patch
 patch: node_modules test
-	npx versions -pd patch $(wildcard *.user.css) package.json package-lock.json
+	npx versions -pd patch $(wildcard *.user.css) package.json $(lock_file)
 	git push --tags origin master
 
 .PHONY: minor
 minor: node_modules test
-	npx versions -pd minor $(wildcard *.user.css) package.json package-lock.json
+	npx versions -pd minor $(wildcard *.user.css) package.json $(lock_file)
 	git push --tags origin master
 
 .PHONY: major
 major: node_modules test
-	npx versions -pd major $(wildcard *.user.css) package.json package-lock.json
+	npx versions -pd major $(wildcard *.user.css) package.json $(lock_file)
 	git push --tags origin master
