@@ -1,4 +1,3 @@
-import esc from "escape-string-regexp";
 import fetchCss from "fetch-css";
 import remapCss from "remap-css";
 import { readFileSync } from "node:fs";
@@ -11,6 +10,10 @@ import ignoresFn from "../src/gen/ignores.js";
 import sourcesFn from "../src/gen/sources.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+function esc(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
   // main first

@@ -1,8 +1,17 @@
 package_manager := yarn
 lock_file := yarn.lock
 
-node_modules: $(lock_file)
-	$(package_manager) install --no-save
+.yarn/install-state.gz: $(lock_file)
+	rm -f ./.yarnrc.yml
+	npm install -g corepack
+	sudo corepack enable
+	$(package_manager) install
+	@touch node_modules
+
+node_modules: .yarn/install-state.gz
+	npm install -g corepack
+	corepack enable
+	$(package_manager) install
 	@touch node_modules
 
 .PHONY: test

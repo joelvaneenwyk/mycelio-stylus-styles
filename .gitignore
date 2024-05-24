@@ -1,10 +1,6 @@
-/.vscode
 /node_modules
 /npm-debug.log*
 /yarn-error.log
 /package-lock.json
-/.yarn/releases/
-/.yarn/unplugged/
-/.yarn/install-state.gz
 .pnp.cjs
 .pnp.loader.mjs
