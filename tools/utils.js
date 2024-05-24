@@ -1,20 +1,21 @@
 import fastGlob from "fast-glob";
 import fetchEnhanced from "fetch-enhanced";
 import nodeFetch from "node-fetch";
-import {platform} from "node:os";
-import {resolve, dirname} from "node:path";
-import {writeFileSync, truncateSync} from "node:fs";
-import {fileURLToPath} from "node:url";
+import { platform } from "node:os";
+import { resolve, dirname } from "node:path";
+import { writeFileSync, truncateSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { exit as _exit } from "node:process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const fetch = fetchEnhanced(nodeFetch, {undici: false});
+const fetch = fetchEnhanced(nodeFetch, { undici: false });
 
 // version of writeFile that preserves metadata on WSL and Cygwin platforms
 export function writeFile(file, content) {
   if (platform() === "win32") {
     try {
       truncateSync(file);
-      writeFileSync(file, content, {flag: "r+"});
+      writeFileSync(file, content, { flag: "r+" });
     } catch {
       writeFileSync(file, content);
     }
@@ -25,11 +26,11 @@ export function writeFile(file, content) {
 
 export function exit(err) {
   if (err) console.error(err);
-  process.exit(err ? 1 : 0);
+  _exit(err ? 1 : 0);
 }
 
 export function glob(pattern) {
-  return fastGlob.sync(pattern, {cwd: resolve(__dirname, ".."), absolute: true});
+  return fastGlob.sync(pattern, { cwd: resolve(__dirname, ".."), absolute: true });
 }
 
 let chromeVersion;

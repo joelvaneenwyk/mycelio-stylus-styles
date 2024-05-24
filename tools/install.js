@@ -1,8 +1,9 @@
 import open from "open";
-import {createServer} from "node:http";
-import {dirname, resolve} from "node:path";
-import {readFileSync} from "node:fs";
-import {fileURLToPath} from "node:url";
+import { createServer } from "node:http";
+import { dirname, resolve } from "node:path";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { exit } from "node:process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const file = readFileSync(resolve(__dirname, "../github-dark.user.css"));
@@ -11,7 +12,7 @@ const server = createServer((_, res) => {
   res.setHeader("content-type", "text/css");
   res.on("close", () => {
     setTimeout(() => {
-      process.exit(0);
+      exit(0);
     }, 4000);
   });
   res.end(file);

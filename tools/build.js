@@ -94,7 +94,7 @@ async function main() {
 
   for (const [type, themes] of Object.entries(await getThemes())) {
     const parts = [];
-    for (const [_filename, themeCss] of Object.entries(themes)) {
+    for (const [, themeCss] of Object.entries(themes)) {
       const name = extractThemeName(themeCss);
       parts.push(`  ${name.replace(/\s*/, "")} "${name}" <<<EOT\n  ${themeCss.replace(/\*\//g, "*\\/").replace(/\n/, "")} EOT;`);
     }
@@ -107,7 +107,7 @@ async function main() {
     try {
       css = await fetchCss([source]);
       result = remapCss(css, mappings, remapOpts);
-    } catch (error) {
+    } catch {
       console.log(`Failed to fetch CSS from source: '${source.file}'`);
     }
     return result ?? new Promise(() => '');

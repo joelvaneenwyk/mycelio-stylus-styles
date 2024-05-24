@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     5.5.88
+@version     ^5.5.88
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     BSD-2-Clause
@@ -415,15 +415,6 @@
   .home-globe-scene {
     -webkit-mask-image: linear-gradient(to bottom, #f0f0f0 60%, transparent 75%);
     mask-image: linear-gradient(to bottom, #f0f0f0 60%, transparent 75%);
-  }
-  .gXEGvh, .jmggSN th, .jpIAs:hover {
-    background-color: var(--bgColor-muted, var(--color-canvas-subtle, #222));
-  }
-  .dheQRw:is(button) {
-    background-color: transparent;
-  }
-  .GsMkW:is(button) {
-    background-color: transparent;
   }
   [data-color-mode="auto"][data-light-theme="light"],
   [data-color-mode="auto"][data-light-theme="light"] ::backdrop,
