@@ -6,35 +6,35 @@ __metadata:
   cacheKey: 10c0
 
 "@babel/code-frame@npm:^7.0.0":
-  version: 7.24.2
-  resolution: "@babel/code-frame@npm:7.24.2"
+  version: 7.24.6
+  resolution: "@babel/code-frame@npm:7.24.6"
   dependencies:
-    "@babel/highlight": "npm:^7.24.2"
+    "@babel/highlight": "npm:^7.24.6"
     picocolors: "npm:^1.0.0"
-  checksum: 10c0/d1d4cba89475ab6aab7a88242e1fd73b15ecb9f30c109b69752956434d10a26a52cbd37727c4eca104b6d45227bd1dfce39a6a6f4a14c9b2f07f871e968cf406
+  checksum: 10c0/c93c6d1763530f415218c31d07359364397f19b70026abdff766164c21ed352a931cf07f3102c5fb9e04792de319e332d68bcb1f7debef601a02197f90f9ba24
   languageName: node
   linkType: hard
 
-"@babel/helper-validator-identifier@npm:^7.24.5":
-  version: 7.24.5
-  resolution: "@babel/helper-validator-identifier@npm:7.24.5"
-  checksum: 10c0/05f957229d89ce95a137d04e27f7d0680d84ae48b6ad830e399db0779341f7d30290f863a93351b4b3bde2166737f73a286ea42856bb07c8ddaa95600d38645c
+"@babel/helper-validator-identifier@npm:^7.24.6":
+  version: 7.24.6
+  resolution: "@babel/helper-validator-identifier@npm:7.24.6"
+  checksum: 10c0/d29d2e3fca66c31867a009014169b93f7bc21c8fc1dd7d0b9d85d7a4000670526ff2222d966febb75a6e12f9859a31d1e75b558984e28ecb69651314dd0a6fd1
   languageName: node
   linkType: hard
 
-"@babel/highlight@npm:^7.24.2":
-  version: 7.24.5
-  resolution: "@babel/highlight@npm:7.24.5"
+"@babel/highlight@npm:^7.24.6":
+  version: 7.24.6
+  resolution: "@babel/highlight@npm:7.24.6"
   dependencies:
-    "@babel/helper-validator-identifier": "npm:^7.24.5"
+    "@babel/helper-validator-identifier": "npm:^7.24.6"
     chalk: "npm:^2.4.2"
     js-tokens: "npm:^4.0.0"
     picocolors: "npm:^1.0.0"
-  checksum: 10c0/e98047d3ad24608bfa596d000c861a2cc875af897427f2833b91a4e0d4cead07301a7ec15fa26093dcd61e036e2eed2db338ae54f93016fe0dc785fadc4159db
+  checksum: 10c0/5bbc31695e5d44e97feb267f7aaf4c52908560d184ffeb2e2e57aae058d40125592931883889413e19def3326895ddb41ff45e090fa90b459d8c294b4ffc238c
   languageName: node
   linkType: hard
 
-"@csstools/css-parser-algorithms@npm:^2.6.1":
+"@csstools/css-parser-algorithms@npm:^2.6.1, @csstools/css-parser-algorithms@npm:^2.6.3":
   version: 2.6.3
   resolution: "@csstools/css-parser-algorithms@npm:2.6.3"
   peerDependencies:
@@ -43,14 +43,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-tokenizer@npm:^2.2.4":
+"@csstools/css-tokenizer@npm:^2.2.4, @csstools/css-tokenizer@npm:^2.3.1":
   version: 2.3.1
   resolution: "@csstools/css-tokenizer@npm:2.3.1"
   checksum: 10c0/fed6619fb5108e109d4dd10b0e967035a92793bae8fb84544e1342058b6df4e306d9d075623e2201fe88831b1ada797aea3546a8d12229d2d81cd7a5dfee4444
   languageName: node
   linkType: hard
 
-"@csstools/media-query-list-parser@npm:^2.1.9":
+"@csstools/media-query-list-parser@npm:^2.1.11, @csstools/media-query-list-parser@npm:^2.1.9":
   version: 2.1.11
   resolution: "@csstools/media-query-list-parser@npm:2.1.11"
   peerDependencies:
@@ -60,7 +60,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/selector-specificity@npm:^3.0.3":
+"@csstools/selector-specificity@npm:^3.1.1":
   version: 3.1.1
   resolution: "@csstools/selector-specificity@npm:3.1.1"
   peerDependencies:
@@ -69,7 +69,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dual-bundle/import-meta-resolve@npm:^4.0.0":
+"@dual-bundle/import-meta-resolve@npm:^4.1.0":
   version: 4.1.0
   resolution: "@dual-bundle/import-meta-resolve@npm:4.1.0"
   checksum: 10c0/55069e550ee2710e738dd8bbd34aba796cede456287454b50c3be46fbef8695d00625677f3f41f5ffbec1174c0f57f314da9a908388bc9f8ad41a8438db884d9
@@ -111,7 +111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.3.0, @eslint/js@npm:^9":
+"@eslint/js@npm:9.3.0, @eslint/js@npm:^9.3.0":
   version: 9.3.0
   resolution: "@eslint/js@npm:9.3.0"
   checksum: 10c0/1550c68922eb17c3ce541d9ffbb687e656bc0d4e2fff2d9cb0a75101a9cdb6184b7af7378ccf46c6ca750b280d25d45cc5e7374a83a4ee89d404d3717502fd9d
@@ -926,9 +926,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.668":
-  version: 1.4.781
-  resolution: "electron-to-chromium@npm:1.4.781"
-  checksum: 10c0/994444e7f00dd98e8e941a8ea30a36243318d51645e364945802fdefb45a232431b60b3bb400f4dc095cc86b71e0ffa8ec6fd35e5047f6127a7ab1c22218eecd
+  version: 1.4.783
+  resolution: "electron-to-chromium@npm:1.4.783"
+  checksum: 10c0/d112e5602e2ee7516ead648e2d2449027f1106147858442781ac475f9a3861a783cb6c8f4638316800f5eff2c4a1f046cd412704678c90479c5417bf204de572
   languageName: node
   linkType: hard
 
@@ -1007,7 +1007,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9":
+"eslint@npm:^9.3.0":
   version: 9.3.0
   resolution: "eslint@npm:9.3.0"
   dependencies:
@@ -1709,10 +1709,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"known-css-properties@npm:0.30.0, known-css-properties@npm:^0.30.0":
+"known-css-properties@npm:0.30.0":
   version: 0.30.0
   resolution: "known-css-properties@npm:0.30.0"
   checksum: 10c0/8b487a6b33487affcec41eb392ceb77acf4d093558dde5c88b5ea06b9a3c81781876d7cb09872e0518b9602f27c8f4112c9ac333e02c90a91c8fbd12e202ed48
+  languageName: node
+  linkType: hard
+
+"known-css-properties@npm:^0.31.0":
+  version: 0.31.0
+  resolution: "known-css-properties@npm:0.31.0"
+  checksum: 10c0/8e643cbed32d7733278ba215c43dfc38fc7e77d391f66b81f07228af97d69ce2cebba03a9bc1ac859479e162aea812e258b30f4c93cb7b7adfd0622a141d36da
   languageName: node
   linkType: hard
 
@@ -2490,7 +2497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.16":
+"postcss-selector-parser@npm:^6.0.16, postcss-selector-parser@npm:^6.1.0":
   version: 6.1.0
   resolution: "postcss-selector-parser@npm:6.1.0"
   dependencies:
@@ -2784,9 +2791,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@eslint/js": "npm:^9"
+    "@eslint/js": "npm:^9.3.0"
     cssnano: "npm:^7.0.1"
-    eslint: "npm:^9"
+    eslint: "npm:^9.3.0"
     fast-glob: "npm:^3.3.2"
     fetch-css: "npm:^4.1.2"
     fetch-enhanced: "npm:^12.1.0"
@@ -2797,11 +2804,11 @@ __metadata:
     postcss: "npm:^8.4.38"
     prettier: "npm:^3.2.5"
     remap-css: "npm:^7.0.5"
-    stylelint: "npm:^16.5.0"
+    stylelint: "npm:^16.6.0"
     stylelint-config-silverwind: "npm:^24.0.2"
     typescript: "npm:^5.4.5"
     updates: "npm:^16.1.1"
-    versions: "npm:^12.1.0"
+    versions: "npm:^12.1.1"
   languageName: unknown
   linkType: soft
 
@@ -3032,15 +3039,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.4.0, stylelint@npm:^16.5.0":
-  version: 16.5.0
-  resolution: "stylelint@npm:16.5.0"
+"stylelint@npm:^16.4.0, stylelint@npm:^16.6.0":
+  version: 16.6.0
+  resolution: "stylelint@npm:16.6.0"
   dependencies:
-    "@csstools/css-parser-algorithms": "npm:^2.6.1"
-    "@csstools/css-tokenizer": "npm:^2.2.4"
-    "@csstools/media-query-list-parser": "npm:^2.1.9"
-    "@csstools/selector-specificity": "npm:^3.0.3"
-    "@dual-bundle/import-meta-resolve": "npm:^4.0.0"
+    "@csstools/css-parser-algorithms": "npm:^2.6.3"
+    "@csstools/css-tokenizer": "npm:^2.3.1"
+    "@csstools/media-query-list-parser": "npm:^2.1.11"
+    "@csstools/selector-specificity": "npm:^3.1.1"
+    "@dual-bundle/import-meta-resolve": "npm:^4.1.0"
     balanced-match: "npm:^2.0.0"
     colord: "npm:^2.9.3"
     cosmiconfig: "npm:^9.0.0"
@@ -3057,16 +3064,16 @@ __metadata:
     ignore: "npm:^5.3.1"
     imurmurhash: "npm:^0.1.4"
     is-plain-object: "npm:^5.0.0"
-    known-css-properties: "npm:^0.30.0"
+    known-css-properties: "npm:^0.31.0"
     mathml-tag-names: "npm:^2.1.3"
     meow: "npm:^13.2.0"
     micromatch: "npm:^4.0.5"
     normalize-path: "npm:^3.0.0"
-    picocolors: "npm:^1.0.0"
+    picocolors: "npm:^1.0.1"
     postcss: "npm:^8.4.38"
     postcss-resolve-nested-selector: "npm:^0.1.1"
     postcss-safe-parser: "npm:^7.0.0"
-    postcss-selector-parser: "npm:^6.0.16"
+    postcss-selector-parser: "npm:^6.1.0"
     postcss-value-parser: "npm:^4.2.0"
     resolve-from: "npm:^5.0.0"
     string-width: "npm:^4.2.3"
@@ -3077,7 +3084,7 @@ __metadata:
     write-file-atomic: "npm:^5.0.1"
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 10c0/9281693ff6c1918e07fdcf7a950531f79678a28261a0d5bd36ca2fcf524e53d7305158d20ba890f5dd01c0ff90c09a13453dce2fe6887f4c157d8c2c0acf3666
+  checksum: 10c0/acfb7983a0b71677d066b2aa570eefdac0a7be2e21351bac8884b8156deaeec19e53ad128ae7ae7933c79f6045f1de8d759ba06cfbc373b2711015860805a3e7
   languageName: node
   linkType: hard
 
@@ -3308,12 +3315,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"versions@npm:^12.1.0":
-  version: 12.1.0
-  resolution: "versions@npm:12.1.0"
+"versions@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "versions@npm:12.1.1"
   bin:
     versions: dist/versions.js
-  checksum: 10c0/df535f9d557915ea69bb26347622e5c2f1de785efe89a936fb9a0136b3e06867442ab2fd4310f1879b0c5419fc8ab4285bebb118d87f2faa5777e2ae58d3df6a
+  checksum: 10c0/fc3e6a0de99d1a3e0e6ca15ef76d727a7244bc0accca69022600bef1dde36aca9b5d56b62a87c2b6ac917c393d2f229a3c5a06c9ebf4c10f3fa745014461ed46
   languageName: node
   linkType: hard
 

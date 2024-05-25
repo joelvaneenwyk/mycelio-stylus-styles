@@ -1,18 +1,17 @@
 package_manager := yarn
 lock_file := yarn.lock
+package_state := .yarn/install-state.gz
 
 .yarn/install-state.gz: $(lock_file)
-	rm -f ./.yarnrc.yml
-	npm install -g corepack
+	sudo npm install -g corepack
 	sudo corepack enable
 	$(package_manager) install
-	@touch node_modules
 
+.PHONY: node_modules
 node_modules: .yarn/install-state.gz
-	npm install -g corepack
-	corepack enable
-	$(package_manager) install
-	@touch node_modules
+
+.PHONY: all
+all: build lint authors update
 
 .PHONY: test
 test: lint
@@ -26,13 +25,11 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules
-	npx eslint --color src/gen tools
-	npx stylelint --color src/**/*.css
+	yarn lint
 
 .PHONY: lint-fix
 lint-fix: node_modules
-	npx eslint --color src/gen tools --fix
-	npx stylelint --color src/**/*.css --fix
+	yarn lint:fix
 
 .PHONY: authors
 authors:
@@ -48,10 +45,9 @@ install: node_modules
 
 .PHONY: update
 update: node_modules
-	npx updates -cu
-	rm $(lock_file)
+	npx -y updates -cu
+	rm -rf $(lock_file) $(package_state)
 	$(package_manager) install
-	@touch node_modules
 
 .PHONY: patch
 patch: node_modules test

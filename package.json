@@ -5,13 +5,18 @@
   "scripts": {
     "build": "yarn node ./tools/build.js",
     "clean": "yarn node ./tools/clean.js",
-    "lint": "eslint \"**\"",
+    "lint": "yarn lint:eslint && yarn lint:stylelint",
+    "lint:eslint": "eslint --color src/gen tools",
+    "lint:stylelint": "stylelint --formatter=verbose --color src/**/*.css",
+    "lint:fix": "yarn lint:eslint:fix && yarn lint:stylelint:fix",
+    "lint:eslint:fix": "eslint --color src/gen tools",
+    "lint:stylelint:fix": "stylelint --formatter=verbose --color src/**/*.css",
     "authors": "bash ./tools/authors.sh"
   },
   "devDependencies": {
-    "@eslint/js": "^9",
+    "@eslint/js": "^9.3.0",
     "cssnano": "^7.0.1",
-    "eslint": "^9",
+    "eslint": "^9.3.0",
     "fast-glob": "^3.3.2",
     "fetch-css": "^4.1.2",
     "fetch-enhanced": "^12.1.0",
@@ -22,10 +27,10 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "remap-css": "^7.0.5",
-    "stylelint": "^16.5.0",
+    "stylelint": "^16.6.0",
     "stylelint-config-silverwind": "^24.0.2",
     "typescript": "^5.4.5",
     "updates": "^16.1.1",
-    "versions": "^12.1.0"
+    "versions": "^12.1.1"
   }
 }
