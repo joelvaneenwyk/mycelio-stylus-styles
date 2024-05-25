@@ -5,6 +5,8 @@ on:
     branches: [main, develop]
   pull_request:
     branches: [main, develop]
+  schedule:
+    - cron: "0 */4 * * *"
 
 jobs:
   test:
@@ -15,8 +17,8 @@ jobs:
         with:
           node-version: 20
       - uses: xt0rted/stylelint-problem-matcher@v1
-      - run: sudo npm install -g corepack
-      - run: sudo corepack enable
-      - run: yarn install
       - run: make deps
       - run: make test
+        env:
+          GHD_GH_USERNAME: ${{ github.repository_owner }}
+          GHD_GH_PASSWORD: ${{ github.token }}
